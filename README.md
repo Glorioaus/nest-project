@@ -6,8 +6,8 @@
 [travis-url]: https://travis-ci.org/nestjs/nest
 [linux-image]: https://img.shields.io/travis/nestjs/nest/master.svg?label=linux
 [linux-url]: https://travis-ci.org/nestjs/nest
-  
-  <p align="center">A progressive <a href="http://nodejs.org" target="blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
+
+  <p align="center">一个渐进式的 <a href="http://nodejs.org" target="blank">Node.js</a> 框架，用于构建高效且可扩展的服务端应用程序。</p>
     <p align="center">
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~nestjscore"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
@@ -21,45 +21,49 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+## 项目描述
 
-[Nest](https://github.com/nestjs/nest) framework JavaScript starter repository.
+[Nest](https://github.com/nestjs/nest) 框架 JavaScript 启动项目模板。
 
-## Installation
+## 安装
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+## 运行应用
 
 ```bash
-# development
+# 开发模式
 $ npm run start
 
-# watch mode
+# 监听模式
 $ npm run start:dev
 ```
 
-## Test
+## 测试
 
 ```bash
-# unit tests
+# 单元测试
 $ npm run test
 
-# e2e tests
+# 端到端测试
 $ npm run test:e2e
 
-# test coverage
+# 测试覆盖率
 $ npm run test:cov
 ```
 
-## Support
+## 支持
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Nest 是一个采用 MIT 许可证的开源项目。它能够持续发展得益于赞助商和众多支持者的帮助。如果您想加入他们，请[点击这里了解更多](https://docs.nestjs.com/support)。
 
-## Stay in touch
+## 保持联系
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
+- 作者 - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
+- 官网 - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
+
+## 许可证
+
+Nest 采用 [MIT 许可证](LICENSE)。

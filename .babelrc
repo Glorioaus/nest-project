@@ -1,7 +1,21 @@
 {
-  "presets": ["@babel/preset-env"],
+  "presets": [
+    // @babel/preset-env 是一个智能预设，它允许你使用最新的JavaScript语法，
+    // 而无需微观管理目标环境需要的语法转换。
+    "@babel/preset-env"
+  ],
   "plugins": [
+    // 这个插件是修复问题的关键。它让Babel能够正确处理参数装饰器（如 @Param, @Body等）。
+    // 在Nest.js的Babel环境里，这是必需的，以便依赖注入系统能正确识别和注入请求参数。
+    // 重要：这个插件必须放在decorators插件之前。
+    "babel-plugin-parameter-decorator",
+
+    // @babel/plugin-proposal-decorators 插件让Babel能够理解和转换装饰器语法。
+    // "legacy": true 是为了兼容旧版的装饰器提案，Nest.js目前依赖于此。
     ["@babel/plugin-proposal-decorators", { "legacy": true }],
+
+    // @babel/plugin-transform-runtime 插件可以复用Babel注入的辅助代码，以节省代码大小。
+    // "regenerator": true 确保了像 async/await 这样的异步功能能被正确转换为兼容性代码。
     [
       "@babel/plugin-transform-runtime",
       {

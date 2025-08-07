@@ -1,4 +1,4 @@
-import { Controller, Dependencies, Get } from '@nestjs/common';
+import { Controller, Dependencies, Get, Post, Param, Req } from '@nestjs/common';
 import { AppService } from './app.service';
 
 // @Controller()装饰器将这个类标记为一个控制器。
@@ -19,5 +19,51 @@ export class AppController {
   getHello() {
     // 调用AppService中的getHello方法，并返回结果。
     return this.appService.getHello();
+  }
+}
+
+@Controller('cats')
+// 在这个特殊的Babel项目配置中，任何使用了参数装饰器（如@Param）的控制器，
+// 都需要@Dependencies()来触发参数的注入，即使它没有构造函数依赖。
+@Dependencies()
+export class CatsController {
+  /**
+   * 创建新的猫咪记录
+   * @returns {string} 创建成功的消息
+   */
+  @Post()
+  create() {
+    return 'This action adds a new cat';
+  }
+
+  /**
+   * 获取所有猫咪列表
+   * @returns {string} 简单的返回消息
+   */
+  @Get()
+  findAll1() {
+    return '111';
+  }
+
+  /**
+   * 获取特定品种的猫咪
+   * @returns {string} 品种相关的消息
+   */
+  @Get('breed')
+  findAll() {
+    return 'This action returns all cats';
+  }
+
+  /**
+   * 使用路由参数获取特定ID的记录
+   * @param {string} id - 从URL中捕获的ID
+   * @returns {string} 包含ID的消息
+   */
+  @Get('abcd/:id')
+  findOne(@Param('id') id) {
+    debugger
+    console.log('请求的ID:', id);
+    console.log('请求的ID:', id);
+    return `This action returns a record with id: ${id}`;
   }
 }
